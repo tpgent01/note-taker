@@ -12,9 +12,9 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../../public/index.html"));
 });
 
-// If no matching route is found, default to homepage
-router.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../public/index.html"));
+// If no matching route is found default to home page
+router.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
 
 
