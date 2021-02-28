@@ -1,28 +1,28 @@
 const router = require('express').Router();
-const saveData = require('../../db/saveData');
+const { deleteNote, createNote, validateNote } = require('../../lib/notes');
+const db = require('../../db/db');
 
 // GET request
 router.get('/notes', function (req, res) {
-    saveData
-        .retrieveNotes()
-        .then(notes => res.json(notes))
-        .catch(err => res.status(500).json(err));
+    return res.json(db);
 });
 
 // POST request
 router.post('/notes', (req, res) => {
-    saveData
-        .addNote(req.body)
-        .then((note) => res.json(note))
-        .catch(err => res.status(500).json(err));
+    req.body.id = db.length.toString();
+
+    if (!validateNote(req.body)) {
+        res.status(400).send('The note is incorrectly formatted.');
+    } else {
+        const note = createNote(req.body, db);
+        res.json(note);
+    }
 });
 
 // Bonus - DELETE request
 router.delete('/notes:id', function (req, res) {
-    saveData
-        .deleteNote(req.params.id)
-        .then(() => res.json({ ok: true }))
-        .catch(err => res.status(500).json(err));
+    db = deleteNote(req.params.id, db);
+    res.json(db)
 });
 
 
