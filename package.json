@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "inquirer": "^8.0.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.6"
   },
   "repository": {
     "type": "git",
