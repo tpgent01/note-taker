@@ -2,7 +2,7 @@ const router = require('express').Router();
 const saveData = require('../../db/saveData');
 
 // GET request
-router.get('../../public/notes.html', function (req, res) {
+router.get('/notes', function (req, res) {
     saveData
         .retrieveNotes()
         .then(notes => res.json(notes))
@@ -10,7 +10,7 @@ router.get('../../public/notes.html', function (req, res) {
 });
 
 // POST request
-router.post('../../public/notes.html', (req, res) => {
+router.post('/notes', (req, res) => {
     saveData
         .addNote(req.body)
         .then((note) => res.json(note))
@@ -18,7 +18,7 @@ router.post('../../public/notes.html', (req, res) => {
 });
 
 // Bonus - DELETE request
-router.delete('../../public/notes.html/:id', function (req, res) {
+router.delete('/notes:id', function (req, res) {
     saveData
         .deleteNote(req.params.id)
         .then(() => res.json({ ok: true }))
