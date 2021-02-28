@@ -1,6 +1,12 @@
 const router = require('express').Router();
 const path = require('path');
 
+
+// GET Notes request
+router.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../public/notes.html"));
+});
+
 // GET request
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../../public/index.html"));
@@ -9,11 +15,6 @@ router.get("/", (req, res) => {
 // If no matching route is found, default to homepage
 router.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../../public/index.html"));
-});
-
-// GET Notes request
-router.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../public/notes.html"));
 });
 
 

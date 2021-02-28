@@ -1,16 +1,17 @@
 const fs = require("fs");
 const util = require("util");
+const { v4: uuidv4 } = require('uuid'); // Newest update
 
-const readFileAsync = util.promisify(fs.readFile);
-const writeFileAsync = util.promisify(fs.writeFile);
+const readNote = util.promisify(fs.readFile);
+const writeNote = util.promisify(fs.writeFile);
 
-class Store {
-    read() {
-      return readFileAsync("db/db.json", "utf8");
+class Save {
+    write(note) {
+        return writeNote("db/db.json", JSON.stringify(note));
     }
 
-    write(note) {
-      return writeFileAsync("db/db.json", JSON.stringify(note));
+    read() {
+      return readNote("db/db.json", "utf8");
     }
 
     getNotes() {
@@ -23,7 +24,6 @@ class Store {
         } catch (err) {
           parsedNotes = [];
         }
-
         return parsedNotes;
       });
     }
@@ -32,11 +32,11 @@ class Store {
       const { title, text } = note;
 
       if (!title || !text) {
-        throw new Error("Note 'title' and 'text' cannot be blank");
+        throw new Error("Note title and text cannot be blank.");
       }
 
       // Add a unique id to the note using uuid package
-      //const newNote = { title, text, id: uuidv1() };
+      const newNote = { title, text, id: uuidv4() };
 
       // Get all notes, add the new note, write all the updated notes, return the newNote
       return this.getNotes()
@@ -45,12 +45,12 @@ class Store {
         .then(() => newNote);
     }
 
-    removeNote(id) {
-      // Get all notes, remove the note with the given id, write the filtered notes
-      return this.getNotes()
-        .then(notes => notes.filter(note => note.id !== id))
-        .then(filteredNotes => this.write(filteredNotes));
+    // BONUS - Delete note function
+    deleteNote(id) {
+        return this.getNotes()
+            .then(notes => notes.filter(note => note.id !== id))
+            .then(filteredNotes => this.write(filteredNotes));
     }
 }
 
-module.exports = new Store();
+module.exports = new Save();
