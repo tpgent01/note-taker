@@ -48,7 +48,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 
 ## 🎨Mock-Up
-![](assets/mock-up.png)
+![](assets/mock-up1.png)
+<br>![](assets/mock-up2.png)</br>
 
 
 ## 🔌Installation
