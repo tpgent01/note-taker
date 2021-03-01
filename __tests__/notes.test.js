@@ -16,3 +16,21 @@ test("Creates a new note", () => {
     expect(newNote.title).toBe("First Test Note");
     expect(newNote.text).toBe("blah blah");
 });
+
+test("Validates the note", () => {
+    const goodNote = {
+        title: "Second Test Note",
+        text: "blah blah"
+    };
+
+    const badNote = {
+        title: "",
+        text: ""
+    };
+
+    const goodResult = validateNote(goodNote);
+    const badResult = validateNote(badNote);
+
+    expect(goodResult).toBe(true);
+    expect(badResult).toBe(false);
+});
