@@ -16,9 +16,9 @@ An application to write and save notes from a JSON file using Express.js back en
 * [Built With](#built-with)
 * [License](#license)
 * [Badges](#badges)
-* [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
+* [Contributing](#contributing)
 
 
 ## 🧠User Story
@@ -95,18 +95,19 @@ Licensed under the MIT license.
 <br>![GitHub Repo stars](https://img.shields.io/github/stars/tpgent01/note-taker?style=social)</br>
 
 
-## 📌Contributing
-
-Taylor Gentry ©2021 All Rights Reserved.
-
 
 ## 📊Tests
 
 To test this project, please see the [Installation](#installation) section - then run command _npm run test_.
 <br>The functions were tested before building out the remainder of the program.</br> 
-<br>![](public/assets/images/tests.gif)</br>
+<br>![](public/assets/images/test.gif)</br>
 
 
 ## ❓Questions
 If you have any questions about this projects, please contact me directly at tpgent01@outlook.com. 
 <br>You can view more of my projects at https://github.com/tpgent01 👾</br>
+
+
+## 📌Contributing
+
+Taylor Gentry ©2021 All Rights Reserved.
