@@ -48,8 +48,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 
 ## 🎨Mock-Up
-![](assets/mock-up1.png)
-<br>![](assets/mock-up2.png)</br>
+![](public/assets/images/mock-up1.png)
+<br>![](public/assets/images/mock-up2.png)</br>
 
 
 ## 🔌Installation
@@ -58,18 +58,21 @@ The user should clone the repository from GitHub and open up the project in thei
 
 
 ## 💻Usage 
-Please run command _node index.js_.
+To run on localhost:3001, please run command _npm start_ to start the server and _control C_ to stop.
+To run program on Heroku, please [click here](https://gentry-note-taker.herokuapp.com/).
 <br>[Click me for walkthrough❗️](https://drive.google.com/file/d/1KapztHhk4d70i89yPy8xY-UeZX8Ts1Rh/view)</br>
 <br>![](assets/play.gif)</br>
 <br>![](assets/example.gif)</br>
 
 
 ## ✏️Built With
-
 <p><a href="https://nodejs.org/">Node.js</a></p>
 <p><a href="https://www.npmjs.com/">NPM</a></p>
-<p><a href="https://www.npmjs.com/package/inquirer">Inquirer</a></p>
+<p><a href="https://www.npmjs.com/package/express">Express.js</a></p>
+<p><a href="https://www.npmjs.com/package/inquirer">Inquirer.js</a></p>
 <p><a href="https://jestjs.io/">Jest</a></p>
+<p><a href="https://heroku.com/">Heroku</a></p>
+<p><a href="https://getbootstrap.com/">Bootstrap</a></p>
 <p><a href="https://fonts.google.com/">Google Fonts</a></p>
 
 
@@ -82,23 +85,26 @@ Licensed under the MIT license.
 
 ## 🏆Badges
 
-![GitHub top language](https://img.shields.io/github/languages/top/tpgent01/team-profile-generator?style=plastic)
-<br>![GitHub repo size](https://img.shields.io/github/repo-size/tpgent01/team-profile-generator?style=plastic)</br>
+![GitHub top language](https://img.shields.io/github/languages/top/tpgent01/note-taker?style=plastic)
+<br>![GitHub repo size](https://img.shields.io/github/repo-size/tpgent01/note-taker?style=plastic)</br>
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/jest?style=plastic) - Jest
 <br>![npm bundle size](https://img.shields.io/bundlephobia/minzip/inquirer?style=plastic) - Inquirer</br>
-![GitHub closed issues](https://img.shields.io/github/issues-closed/tpgent01/team-profile-generator?style=plastic)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/express?style=plastic) - Express
+<br>![GitHub closed issues](https://img.shields.io/github/issues-closed/tpgent01/note-taker?style=plastic)</br>
+![GitHub watchers](https://img.shields.io/github/watchers/tpgent01/note-taker?style=social)
+<br>![GitHub Repo stars](https://img.shields.io/github/stars/tpgent01/note-taker?style=social)</br>
 
 
 ## 📌Contributing
 
-Taylor Gentry ©2020 All Rights Reserved.
+Taylor Gentry ©2021 All Rights Reserved.
 
 
 ## 📊Tests
 
 To test this project, please see the [Installation](#installation) section - then run command _npm run test_.
-<br>This program was build using class syntax and constructor functions. The functions were tested before building out the remainder of the program.</br> 
-<br>![](assets/tests.gif)</br>
+<br>The functions were tested before building out the remainder of the program.</br> 
+<br>![](public/assets/images/tests.gif)</br>
 
 
 ## ❓Questions
