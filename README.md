@@ -61,8 +61,7 @@ The user should clone the repository from GitHub and open up the project in thei
 To run on localhost:3001, please run command _npm start_ to start the server and _control C_ to stop.
 To run program on Heroku, please [click here](https://gentry-note-taker.herokuapp.com/).
 <br>[Click me for walkthrough❗️](https://drive.google.com/file/d/1KapztHhk4d70i89yPy8xY-UeZX8Ts1Rh/view)</br>
-<br>![](assets/play.gif)</br>
-<br>![](assets/example.gif)</br>
+<br>![](public/assets/images/example.gif)</br>
 
 
 ## ✏️Built With
