@@ -54,13 +54,13 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## 🔌Installation
 The user should clone the repository from GitHub and open up the project in their code editor.
-<br>User will need to run node.js and perform an npm install for all necessary modules listed below.</br>
+<br>User will need to run node.js and perform an _npm install_ for all necessary modules listed below.</br>
 
 
 ## 💻Usage 
 To run on localhost:3001, please run command _npm start_ to start the server and _control C_ to stop.
 To run program on Heroku, please [click here](https://gentry-note-taker.herokuapp.com/).
-<br>[Click me for walkthrough❗️](https://drive.google.com/file/d/1KapztHhk4d70i89yPy8xY-UeZX8Ts1Rh/view)</br>
+<br>[Click me for walkthrough❗️](https://drive.google.com/file/d/1w_e_9PtWJ3t6cPhLJF4xTVtjRc396Spz/view)</br>
 <br>![](public/assets/images/example.gif)</br>
 
 
